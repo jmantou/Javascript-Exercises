@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>JavaScript Exercises Level I - (2)</title>
+	</head>
+	
+	<body>
+	    <h1>JavaScript Exercise 2 - Writing Content in Document</h1>
+	    We can use the <code>Document.write</code> function to output text from JavaScript, but this method
+	    is most often used for testing purposes. However in a real Web app it's more common to use the 'innerHTML' property of 
+	    the Document element. For testing and experimenting we can also use <code>console.log()</code> method
+	    that outputs text in the browser console.
+	    <hr>
+	    <h2>Problem</h2>
+	    Write the message 'Hello, World!' on the browser with two methods.
+	    <h2>Solution</h2>
+		<h4>Writing 'Hello World!' in document body with 'document.write'</h4>
+		<script>
+		    // In HTML5 we do not need to quote language="Javascript" in scripts anymore
+			document.write("Hello World!");
+		</script>
+		<h4>Writing 'Hello World!' in document body with 'innerHTML' property</h4>
+		<div id="section"> </div>
+		<script>
+			var content = document.getElementById("section");
+			content.innerHTML = "Hello World!";
+		</script>
+		
+	</body>
+</html>
+
+		
+	

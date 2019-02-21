@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Javascript Exercises Level I - (11)</title>
+	</head>
+
+	<body>
+		<div id="container" align="left">
+		<h1>Javascript Exercise 11 - Using the Date & Time Functions</h1>
+		<h2>Understanding Date</h2>
+		<p> Date and Time manipulation are an essential part of JavaScript programming because they make 
+			it possible for Web applications to mark the passage of time. The <code>Date</code> data type includes
+			both date and time values. Because dates and times come in great variety the Date object
+			type includes many methods.</p> 
+		<p> In the example below we'll see how we can use some of these.</p>
+		<hr>
+		<h2>Problem</h2>
+		<p>Using the Date object and it's methods write the current time and date in different formats.
+		</p>
+		<h2>Solution</h2>
+		<script>
+			// Constructor without input value gets the current date and time
+			var today = new Date();
+			document.write("<p>Full Date/Time: " + today.toLocaleString() + "</br>");
+			document.write("Full Date: " + today.toLocaleDateString() + "</br>");
+			document.write("Full Time: " + today.toLocaleTimeString() + "</br>");
+			document.write("Date Only: " + today.toDateString() + "</br>");
+			document.write("Time Only: " + today.toTimeString() + "</p>");
+		
+			/* Custom Date and time - We need to add 1 because some methods start from 0
+			* to obtain proper date and time
+			*/
+			document.write("<p>Custom Date (m/d/y): " + (today.getMonth() + 1) + "/" +
+												today.getDate() + "/" +
+												today.getFullYear() + "</br>");
+			document.write("Custom Time (h:m:s:ms): " + today.getHours() + ":" +
+												 today.getMinutes() + ":" +
+												today.getSeconds() + "." +
+												today.getMilliseconds() + "</p>");
+		</script>
+		</div>
+	</body>
+</html>

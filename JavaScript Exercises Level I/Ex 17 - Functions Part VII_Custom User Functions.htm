@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Javascript Exercises Level I - (17)</title>
+	</head>
+
+	<body>
+		<div id="container" align="left">
+		<h1>Javascript Exercise 17 - Building Custom Functions Part VII</h1>
+		<h2>Passing arguments to Functions</h2>
+		<p>You can pass arguments or parameters to functions to modify their outcome. In such a way 
+			we can add flexibility to the defined function without creating extra complexity.</p>
+		<p>The function still performs a single task, but now it can perform the same task with various data.
+			You can call functions with arguments from within other functions or from HTML controls like
+			for example an input type button.</p>
+		<p>The following example produces the first n numbers of the Fibonacci sequence using a non - 
+			recursive algorithm of O(n) complexity. The number of numbers in Fibonacci sequence is coded
+			as a constant but can easily be inserted by the user.</p>
+		<hr>
+		<h2>Problem</h2>
+		<p>Compute the first <strong>n</strong> Fibonacci series numbers with a non - recursive function (eg n = 10).
+		</p>
+		<h2>Solution</h2>
+		<script>
+			function fibonacci(num)
+			{
+				var a = 1, b = 0, temp;
+				while (num >= 0)
+				{
+					temp = a;
+					a = a + b;
+					b = temp;
+					num--;
+				}
+				return b;
+			}
+			
+			const NUMBERS_IN_SEQUENCE = 10;
+			document.write("<h4>The first " + NUMBERS_IN_SEQUENCE + " numbers of Fibonacci sequence " + " are: </h4>");
+			document.write("<strong>0 </strong>");
+			for (var i = 0; i < NUMBERS_IN_SEQUENCE; i++)
+			{
+				document.write("<strong>&nbsp;" + fibonacci(i) + " &nbsp;</strong>");
+			}
+		</script>
+		</div>
+	</body>
+</html>
