@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>JavaScript Exercises Level I - (5)</title>
+	</head>
+	
+	<body>
+	    <h1>JavaScript Exercise 5 - Producing a Magic Multiplication Square</h1>
+		<h2>Nested For Loops</h2>
+		<p>This is a JavaScript exercise that uses a nested loop to produce The Multiplication Table
+		   with numbers from 1 to 15, also known as a Magic Square</p>
+		
+        <div align="left">
+		<hr>
+		<h2>Problem</h2>
+		<p>Write a small app that produces the multiplication table up to a certain number</p>
+		<h2>Solution</h2>
+          <script>
+		  	const NUMBER = 15;
+		    document.write("Here is The Magic Square:");
+			document.write("<p></p>");
+			document.write ("<table border=\"3\"> \n");
+			for(var y = 1; y <= NUMBER; y++)
+			{
+				document.write( "<tr>\n");
+				for(var x = 1;  x <= NUMBER; x++)
+				{
+					document.write( "<td>");
+					document.write(x * y);
+					document.write( "</td> \n");
+				}
+				document.write("</tr> \n");
+			}
+			document.write( "</table>");
+		  </script>
+        </div>
+	</body>
+</html>
+
+		
+	

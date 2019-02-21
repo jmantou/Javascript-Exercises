@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Exercises Level I - (16)</title>
+</head>
+
+<body>
+	<div id="container" align="left"></div>
+	<h1>JavaScript Exercise 16 - Useful Build in functions for manipulating JavaScript Arrays</h1>
+	<h2>Sorting an Array</h2>
+	<p>The Array object's <code>sort</code> method sorts a given array in alphabetical order. To faciliate this
+	    JavaScript converts all Data Types to their <code>String</code> equivalent. If we want to sort
+	    a number array in real numeric order we have to apply a compare function.</p>
+	<p>
+	    The Array object's <code>slice</code> method is a simple way of making a new array from a series of elements
+	    found in another array. The arguments of <code>slice</code> method specify the beginning and the ending of the
+	    sequence of elements that you copy to the new array. If you specify as arguments negative numbers then the slicing is
+	    done from the end of original array.	    
+	</p>
+	<p></p>
+	<hr>
+	<h2>Problem</h2>
+	    Demonstration of Basic Arrray functions for sorting and slicing arrays in alphabetical and numeric fashion.
+	<h2>Solution</h2>		
+		<script>
+		  var pets = new Array("dog", "cat", "bird", "rabbit", "turtle");
+		  document.write("Pets Array: <br/> ");
+		  document.write("<b>" + pets + "</b>");
+		  document.write("<p>Pets Array sorted: " + "<br/>");
+		  document.write("<b>" + pets.sort() + "</b></p>");
+		  
+		  var numberedArray = [1, 3, 45, 6, 88, 10];
+		  
+		  document.write("Numbers Array: <br/> ");
+          document.write("<b>" + numberedArray + "</b>");
+          document.write("<p>Numbers Array sorted (alphabetically): " + "<br/>");
+          document.write("<b>" + numberedArray.sort() + "</b></p>");
+		</script>
+	<p><em><strong>Note:</strong></em> </p>
+	</div>
+</body>
+</html>

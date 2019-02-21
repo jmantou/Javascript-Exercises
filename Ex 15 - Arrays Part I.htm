@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Exercises Level I - (15)</title>
+</head>
+
+<body>
+	<div id="container" align="left"></div>
+	<h1>Javascript Exercise 15 - Creating and Iterating through an Array</h1>
+	<h2>Creating an Array</h2>
+	<p>An array in Javascript is an ordered collection of items, that need not be of the same type.
+		In JavaScript you can create an array using literal notation or object type notation as you
+		can see in this exercise's script.</p>
+	<p>You can easily access all or some elements of an array with a <strong>for</strong> loop. 
+		A for loop can be used to access every element on the array or some depending on the third condition.
+		Array indexing begins at 0 and the array property <strong>length</strong> is used to set the ending
+		of the loop.</p>
+	<p></p>
+	<hr>
+	<h2>Problem</h2>
+	    Demonstration of a Basic Arrray definition and iteration through it's elements. You can view
+	    the source code for the implementation.
+	<h2>Solution</h2>		
+		<script>
+		// Creating Pets Array using Object notation
+		var pets = new Array("dog", "cat", "bird", "rabbit");
+		for (var i = 0; i < pets.length; i++)
+		{
+			document.write("Pet#: " + i + " is " + pets[i] + "<br/>");
+		}
+		</script>
+	    Accessing every other element of an Array. The Array is defined with literal notation.
+	    <br/>
+		<script>
+		// Creating an Array using Literal notation
+		var birds = ["parrot", "hawk", "eagle", "raven"];
+		for (var j = 0; j < birds.length; j += 2)
+		{
+			document.write("Bird#: " + j + " is " + birds[j] + "<br/>");
+		}
+		</script>
+	<p><em><strong>Note:</strong></em> To the programmer there is no difference on how to create an array. You can invoke
+		an <strong>Array</strong> method on both a literal or an object array. However, for the JavaScript engine,
+		an array literal has to be reinterpreted every time it is accessed, especially in
+		function calls, so there might be a difference in speed.</p>
+	</div>
+</body>
+</html>

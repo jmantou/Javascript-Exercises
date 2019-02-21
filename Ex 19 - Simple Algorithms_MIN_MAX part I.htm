@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JavaScript Exercises Level I - (19)</title>
+	</head>
+
+	<body>
+		<div id="container" align="left">
+		<h1>Javascript Exercise 19 - Simple MIN and MAX Algorithms</h1>
+		<h2>Algorithms for finding the Minimum and Maximum in an Array</h2>
+		<p> In the two examples below, functions min and max take as an input a given array and return
+		    the smallest and largest number in the array respectively along with the position of this number
+		    (starting from 0 as usually in JavaScript arrays).
+        </p>
+
+		<hr>
+		<h2>Problem 1</h2>
+		<p>Find the <strong>Minimum</strong> in the given array.
+		</p>
+		<p>Array b = [7, 6, 5, 2, 12, 55, 21]</p>
+		<h2>Solution</h2>
+		<script>
+			function min(a)
+            {
+                var x = 1;
+                var min = a[0];
+                for (var k = 1; k < a.length; k++)
+                {
+                    if(min > a[k])
+                    {
+                        x = k;
+                        min = a[k];
+                    }
+                }
+                document.write("Minimum index: #" + x + "<br/>");
+                return min;
+            }
+            var b = new Array(7, 6, 5, 2, 12, 55, 21);
+        
+            document.write("Minimum is " + min(b));
+		</script>
+		<h2>Problem 2</h2>
+        <p>Find the <strong>Minimum</strong> in the given array.
+        </p>
+        <p>Array b = [7, 6, 5, 2, 12, 55, 21]</p>
+        <h2>Solution</h2>
+        <script>
+           function max(a)
+            {
+                var x = 1;
+                var max = a[0];
+                for (var k = 1; k < a.length; k++)
+                {
+                    if(max < a[k])
+                    {
+                        x = k;
+                        max = a[k];
+                    }
+                }
+                document.write("Maximum index: #" + x + "<br/>");
+                return max;
+            }
+            var b = new Array(7, 6, 5, 2, 12, 55, 21);
+        
+            document.write("Maximum is " + max(b)); 
+        </script>
+		</div>
+	</body>
+</html>

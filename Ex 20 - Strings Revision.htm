@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Exercises Level I - (20)</title>
+	
+</head>
+
+<body>
+	<h1>JavaScript Exercise 20 - Revision of Strings
+	    <h2>Problem</h2>
+	    <p>Write a JavaScript program that checks if a given string is null or alphanumeric and if it is then
+	        it capitalizes the first letter of every word in this sentence.</p>
+	    <h2>Solution</h2>
+	    <p>We will test the script with 3 different strings. First a number string, second a null string and 
+	       finally with a valid alphanumeric sentence</p>
+	    <p>The three strings are: '123456', 'null' string and the sentence 'revision of strings'.</p>
+	<script>
+	   var txt1 = "123456";
+	   var txt2 = "";
+	   var txt3 ="revision of strings";
+	   	   
+       function isNullString(str)
+       {
+           if (str.length === 0) 
+           {
+               return true;
+           }
+           else 
+           {
+               return false;
+           }
+       }
+       
+       function capitalizeFirstLetter(str)
+       {
+           return str.replace(/\w\S*/g, 
+           function(text)
+           {
+                return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
+           });
+       }
+       
+	   document.write("<br/>The String " + txt1 + " is Null? " + isNullString(txt1));
+	   document.write("<br/>The String '" + txt1 + "' after capitilizing first letter: " + capitalizeFirstLetter(txt1));
+	   document.write("<br/>The String '" + txt2 + " '  is Null? " + isNullString(txt2));
+       document.write("<br/>The String '" + txt2 + " ' after capitilizing first letter: " + "' '" +capitalizeFirstLetter(txt2));
+	   document.write("<br/>The String '" + txt3 + "' is Null? " + isNullString(txt3));
+       document.write("<br/>The String '" + txt3 + "' after capitilizing first letter: " + capitalizeFirstLetter(txt3));
+	</script>	
+</body>
+</html>
+
+
+        

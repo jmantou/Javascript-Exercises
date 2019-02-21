@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Javascript Exercises Level I - (10)</title>
+	</head>
+
+	<body>
+		<div id="container" align="left">
+		<h1>Javascript Exercise 10 - Building Custom Functions Part II</h1>
+		<h2>Guidelines to determine when to use Functions</h2>
+		<p>The following quidelines help us determine when to build a new function to separate a code part:</p>
+		<ul>
+		<li>Functions must perform a single task rather than many tasks or only a part of a task.</li>
+		<li>Define new functions with code reusability in mind. Functions should provide enough
+			flexibility to serve a number of callers.</li>
+		<li>The functions you make should perform one task really well and not trying to do many things poorly.
+			</li>
+		<li>A function should seldom be more than a single page or screen. It is easier to understand the 
+			function when you can see all function code in a single screen.</li>
+		</ul>
+		<p>We will create a <strong>Recursive </strong>function that uses a simpler instance of herself to compute an
+			output</p>
+		<hr>
+		<h2>Problem</h2>
+		<p>Compute the first <strong>n</strong> numbers of Fibonacci sequence with a Recursive function (eg n = 5).
+		</p>
+		<h2>Solution</h2>
+		<script>
+			function recursiveFibonacci(num)
+			{
+				if (num < 2)
+					return 1;
+				else
+					return (recursiveFibonacci(num - 1) + recursiveFibonacci(num - 2));
+			}
+			
+			const NUMBERS_IN_SEQUENCE = 5;
+			document.write("<h4>The first " + NUMBERS_IN_SEQUENCE + " numbers of Fibonacci sequence " + " are: </h4>");
+			document.write("<strong>0 </strong>");
+			for (var i = 0; i < NUMBERS_IN_SEQUENCE; i++)
+			{
+				document.write("<strong>&nbsp;" + recursiveFibonacci(i) + " &nbsp;</strong>");
+			}
+		</script>
+		</div>
+	</body>
+</html>
