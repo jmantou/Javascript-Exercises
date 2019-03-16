@@ -1,0 +1,22 @@
+<?php
+class dragonBall
+{
+	private $ballCount;
+
+	public function __construct()
+	{
+		$this->ballCount = 0;
+	}
+
+	public function iFoundBall()
+	{
+		$this->ballCount++;
+		if ($this->ballCOunt === 7)
+		{
+			echo "You can ask your wish";
+			$this->ballCount = 0;
+		}
+	}
+}
+
+?>
